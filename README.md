@@ -27,3 +27,35 @@ It serves as the foundation for testing AI automations, chatbots, and Microsoft 
    ```bash
    git clone https://github.com/Avineous/ceruo-realty.git
    cd ceruo-realty
+
+---
+
+## Sections
+- **Hero Section**: Catchy headline with CTA buttons (Search Properties / Book a Viewing).  
+- **About Us**: Short introduction to CeruO Realty.  
+- **Property Listings**: Six sample Dubai property cards.  
+- **FAQ**: Frequently asked questions about real estate in Dubai.  
+- **Contact Section**: Contact info for inquiries.
+
+---
+
+## Website Link
+(Coming soon — will be updated once deployed on Netlify)
+
+---
+
+## Screenshots
+Hero Section:  
+![Hero Section](/images/screenshots/hero.svg)
+
+Properties Section:  
+![Property Listings](/images/screenshots/properties.svg)
+
+Contact Section:  
+![Contact Section](/images/screenshots/contact.svg)
+
+---
+
+## Disclaimer
+This is a demo project for portfolio and AI agent testing purposes.
+CeruO Realty is not a real company.
