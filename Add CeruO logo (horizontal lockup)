@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">CeruO mark</title>
+  <desc id="desc">Square mark combining a roof-brow owl with house features in cerulean.</desc>
+  <defs>
+    <style>
+      .ceru { fill:#0B74DE; }
+      .dk   { fill:#0A4FA3; }
+      .win  { fill:#ffffff; opacity:.95; }
+    </style>
+  </defs>
+  <!-- Roof/brow -->
+  <polygon class="ceru" points="2,22 24,4 46,22 42,22 24,9 6,22" />
+  <!-- House body -->
+  <rect x="4" y="22" width="40" height="22" rx="4" ry="4" fill="#EBF3FF" />
+  <!-- Eyes -->
+  <circle cx="16" cy="24" r="6" class="ceru"/>
+  <circle cx="32" cy="24" r="6" class="ceru"/>
+  <!-- Window panes -->
+  <rect x="14.4" y="22.4" width="3.2" height="3.2" class="win"/>
+  <rect x="30.4" y="22.4" width="3.2" height="3.2" class="win"/>
+  <!-- Beak -->
+  <polygon points="22.5,26.5 24,23.6 25.5,26.5 24,28" class="dk"/>
+  <!-- Door -->
+  <rect x="22" y="31" width="9" height="11" rx="1.7" class="ceru"/>
+  <circle cx="28.3" cy="36.5" r="1.2" fill="#ffffff"/>
+</svg>
