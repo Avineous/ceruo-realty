@@ -85,3 +85,104 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+/* ------- CeruO layout & contrast fixes (append) ------- */
+
+/* page container */
+body, html {
+  box-sizing: border-box;
+}
+
+/* center page content, add side padding */
+.main {
+  max-width: 1200px;    /* content width */
+  margin: 0 auto;
+  padding: 24px;        /* gap from viewport edges */
+}
+
+/* global readable text color (improves grey legibility) */
+body, p, li, input, textarea {
+  color: #15303b; /* darker slate for readability */
+  font-size: 16px;
+}
+
+/* header adjustments so logo stands out */
+.header {
+  background: linear-gradient(90deg, #073247 0%, #0b556f 100%); /* darker gradient */
+  padding: 12px 0;
+}
+.header-logo { height: 40px; width:auto; display:inline-block; margin-left: 18px; }
+
+/* hero improvements */
+.section.hero {
+  padding: 60px 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(6,38,60,0.95) 0%, rgba(7,103,150,0.95) 100%);
+  box-shadow: 0 12px 32px rgba(6,30,60,0.08);
+}
+.primary-heading { color: #e9f7ff; font-weight:700; font-size:34px; }
+.hero-description { color: rgba(237,250,255,0.92); font-size:16px; max-width:760px; margin: 12px auto 0; }
+
+/* CTA contrast */
+.btn-properties { background: #ffd166; color:#053049; border: none; }
+.btn-contact { color:#ffd166; border-color: rgba(255,209,102,0.16); }
+
+/* add breathing room around sections */
+.section { padding: 28px 0; }
+
+/* Properties: grid layout, spacing, consistent image sizing */
+.properties-set {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.properties-card {
+  background:#fff;
+  border-radius:10px;
+  padding:14px;
+  box-shadow:0 6px 18px rgba(6,30,60,0.04);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.properties-img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:8px;
+  background: #e6f1f9; /* visible background for missing images */
+  display:block;
+}
+
+/* ensure text columns have margins and don't touch viewport */
+.properties-container{ padding:6px 2px 12px 2px; }
+
+/* property stats icons */
+.properties-card-container {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  color:#516b73;
+}
+.properties-card-logo, .about-logo, ion-icon {
+  font-size:18px; /* make icons readable */
+  vertical-align:middle;
+  color:#10708f;
+}
+
+/* FAQ styling — increase contrast */
+.faq .faq-item { border-left: 4px solid #0b74de; background: #fff; padding:14px; margin:10px auto; max-width:900px; color:#1b414b; }
+
+/* small-screen adjustments */
+@media (max-width:900px) {
+  .header-logo { margin-left:10px; height:34px; }
+  .hero { padding:44px 14px; }
+  .hero-description { padding:0 6px; }
+  .properties-img { height:180px; }
+  .main { padding:18px; }
+}
+
+/* fallback trick: if image can't load, set a neutral background-size text using CSS isn't possible,
+   so we will recommend adding onerror fallback on <img> tags (see below) */
