@@ -5,26 +5,68 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Properties — CeruO Realty</title>
   <meta name="description" content="CeruO Realty — Featured properties across Dubai Marina, JLT and Downtown. Click a listing for full details, brochures and contact info." />
+
+  <!-- Fonts (same as homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ionicons for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="/style-fixed.css" />
+
+  <!-- Inline header styles to match homepage header (phrase + search) -->
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: rgba(6,38,60,0.92);
+      position: relative;
+      z-index: 60;
+      gap: 18px;
+    }
+    .header-logo { height: 62px; width: auto; display: inline-block; }
+    .header-center { display:flex; flex-direction:column; align-items:center; margin:0 20px; }
+    .header-phrase { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom:6px; letter-spacing:0.2px; }
+    .header-search { display:flex; width:100%; max-width:360px; }
+    .header-search input { flex:1; padding:8px 10px; border-radius:6px 0 0 6px; border:none; font-size:0.95rem; }
+    .header-search button { padding:8px 12px; border:none; border-radius:0 6px 6px 0; background:#ffd166; color:#053049; font-weight:700; cursor:pointer; }
+    .nav { display:flex; gap:0; align-items:center; }
+    .nav a { color:#fff; text-decoration:none; font-weight:600; padding:6px 10px; }
+    .nav a + a::before { content:"|"; color: rgba(255,255,255,0.25); margin: 0 10px; }
+    @media (max-width:900px) {
+      .header-search { max-width:240px; }
+      .header-logo { height:48px; }
+      .header-phrase { font-size:0.95rem; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Updated Header -->
-  <header class="header">
-    <div class="header-container">
-      <a href="/index.html" class="logo-link">
-        <img src="/images/ceruo-logo-bw.svg" alt="CeruO Realty logo" class="header-logo" />
-        <div class="logo-text">
-          <span class="logo-name">CeruO Realty</span>
-          <span class="logo-tagline">Wise property insight, Dubai.</span>
-        </div>
-      </a>
-      <nav class="nav">
-        <a href="/index.html" class="nav-links">About</a> |
-        <a href="/properties.html" class="nav-links active">Properties</a> |
-        <a href="/faq.html" class="nav-links">FAQ</a> |
-        <a href="#contact" class="nav-links">Contact</a>
-      </nav>
+  <!-- Header: same layout as homepage -->
+  <header class="header" role="banner">
+    <a href="/index.html" aria-label="CeruO Realty home">
+      <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" />
+    </a>
+
+    <div class="header-center" role="search">
+      <div class="header-phrase">Smart. Seamless. Secure.</div>
+      <div class="header-search">
+        <input type="search" placeholder="Search by area, type or price (e.g., Dubai Marina, 2BR, AED 1.5M)" aria-label="Search properties" />
+        <button type="button">Search</button>
+      </div>
     </div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/index.html" class="nav-links">About</a>
+      <a href="/properties.html" class="nav-links active">Properties</a>
+      <a href="/faq.html" class="nav-links">FAQ</a>
+      <a href="#contact" class="nav-links">Contact</a>
+    </nav>
   </header>
 
   <main class="main">
@@ -124,6 +166,17 @@
       <p>© 2025 CeruO Realty — Demo site.</p>
     </div>
   </footer>
+
+  <script>
+    // demo header search behaviour (same as homepage)
+    document.querySelectorAll('.header-search button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const q = btn.previousElementSibling && btn.previousElementSibling.value;
+        if (!q) { alert('Enter a query to search (demo)'); return; }
+        alert('Demo search for: ' + q);
+      });
+    });
+  </script>
 </body>
 </html>
 
