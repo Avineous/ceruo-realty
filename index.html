@@ -29,17 +29,28 @@
   </head>
   <body>
     <header class="header">
-      <a href="/">
-        <!-- white logo for dark hero header -->
-        <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty logo" class="header-logo" />
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="/" class="logo-link" aria-label="CeruO Realty home">
+        <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" />
       </a>
-      <nav class="nav">
-        <a href="#about" class="nav-links">About</a>
-        <a href="/properties.html" class="nav-links">Properties</a>
-        <a href="/faq.html" class="nav-links">FAQ</a>
-        <a href="#contact" class="nav-links">Contact</a>
-      </nav>
-    </header>
+      <!-- optional subline visible on larger screens -->
+      <div class="site-subline">Wise property insight, Dubai.</div>
+    </div>
+
+    <nav class="nav">
+      <a href="/index.html">About</a>
+      <a href="/properties.html">Properties</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="tel:+97145550101" class="contact-link">+971 4 555 0101</a>
+      <a href="#contact" class="btn btn-cta">Enquire</a>
+    </div>
+  </div>
+</header>
 
     <main class="main">
       <!-- HERO -->
@@ -324,6 +335,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
