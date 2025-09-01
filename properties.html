@@ -1,47 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Properties - CeruO Realty</title>
-  <link rel="stylesheet" href="style-fixed.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Properties — CeruO Realty</title>
+  <meta name="description" content="CeruO Realty — Featured properties across Dubai Marina, JLT and Downtown. Click a listing for full details, brochures and contact info." />
+  <link rel="stylesheet" href="/style-fixed.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html"><img src="images/ceruo-logo.svg" alt="CeruO Realty Logo" class="logo" /></a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="properties.html" class="active">Properties</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="header">
+    <a href="/index.html"><img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" /></a>
+    <nav class="nav">
+      <a href="/index.html" class="nav-links">Home</a>
+      <a href="/properties.html" class="nav-links active">Properties</a>
+      <a href="/faq.html" class="nav-links">FAQ</a>
+      <a href="#contact" class="nav-links">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="properties">
-      <h1>Available Properties</h1>
-      <article>
-        <h2>2BR Luxury Apartment — Marina View</h2>
-        <p><strong>Price:</strong> AED 3,500,000</p>
-        <p>Bright 2BR with panoramic marina views, balcony and premium finishes. Building amenities include gym, pool, and 24/7 concierge.</p>
-      </article>
-      <article>
-        <h2>Studio — Ready to Move (JLT)</h2>
-        <p><strong>Price:</strong> AED 52,000/year</p>
-        <p>Compact studio ideal for professionals, close to transport links and retail. Includes pool and secure parking.</p>
-      </article>
-      <article>
-        <h2>3BR Family Apartment — Burj View</h2>
-        <p><strong>Price:</strong> AED 6,200,000</p>
-        <p>Spacious 3BR with Burj Khalifa views, maid's room and two parking spaces. Premium resident facilities and concierge service.</p>
-      </article>
+  <main class="main">
+    <section class="section">
+      <h1 class="secondary-heading">Available Properties</h1>
+      <p class="hero-description">Browse our curated selection of sample Dubai properties. Click a card to view the property detail page with brochure and contact actions.</p>
+
+      <div class="properties-set">
+        <!-- Property 1 -->
+        <article class="properties-card">
+          <img
+            src="/images/ceruo-marina-exterior-3x2.webp"
+            alt="2BR Luxury Apartment — Marina View"
+            class="properties-img"
+            loading="lazy"
+            width="1024" height="688"
+            onerror="this.onerror=null;this.src='/images/ceruo-001-placeholder.svg';" />
+          <div class="properties-container">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Dubai Marina</p>
+            <h2>2BR Luxury Apartment — Marina View</h2>
+            <p class="properties-price"><strong>AED 3,500,000</strong></p>
+            <p>Bright 2BR on a high floor with panoramic marina views, large balcony and premium finishes. Amenities: gym, pool, concierge.</p>
+            <div class="properties-card-container">
+              <div class="properties-cards"><ion-icon name="bed-outline"></ion-icon> 2 Beds</div>
+              <div class="properties-cards"><ion-icon name="water-outline"></ion-icon> 2 Baths</div>
+              <div class="properties-cards"><ion-icon name="golf-outline"></ion-icon> 1,300 sq.ft</div>
+            </div>
+            <p style="margin-top:12px;">
+              <a class="btn properties-link" href="/properties/ceruo-001">View Details →</a>
+              <a class="btn properties-link" href="/downloads/ceruo-001-brochure.pdf" target="_blank">Brochure</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Property 2 -->
+        <article class="properties-card">
+          <img
+            src="/images/ceruo-jlt-studio-2x3.webp"
+            alt="Studio — Jumeirah Lake Towers (JLT)"
+            class="properties-img"
+            loading="lazy"
+            width="688" height="1024"
+            onerror="this.onerror=null;this.src='/images/ceruo-002-placeholder.svg';" />
+          <div class="properties-container">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Jumeirah Lake Towers (JLT)</p>
+            <h2>Studio — Ready to Move</h2>
+            <p class="properties-price"><strong>AED 52,000 / year</strong></p>
+            <p>Compact, modern studio ideal for professionals. Close to transport links and retail — building amenities include pool and parking.</p>
+            <div class="properties-card-container">
+              <div class="properties-cards"><ion-icon name="bed-outline"></ion-icon> Studio</div>
+              <div class="properties-cards"><ion-icon name="water-outline"></ion-icon> 1 Bath</div>
+              <div class="properties-cards"><ion-icon name="golf-outline"></ion-icon> 420 sq.ft</div>
+            </div>
+            <p style="margin-top:12px;">
+              <a class="btn properties-link" href="/properties/ceruo-002">View Details →</a>
+              <a class="btn properties-link" href="/downloads/ceruo-002-brochure.pdf" target="_blank">Brochure</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Property 3 -->
+        <article class="properties-card">
+          <img
+            src="/images/ceruo-downtown-3br-3x2.webp"
+            alt="3BR Family Apartment — Burj View"
+            class="properties-img"
+            loading="lazy"
+            width="1024" height="688"
+            onerror="this.onerror=null;this.src='/images/ceruo-003-placeholder.svg';" />
+          <div class="properties-container">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Downtown Dubai</p>
+            <h2>3BR Family Apartment — Burj View</h2>
+            <p class="properties-price"><strong>AED 6,200,000</strong></p>
+            <p>Spacious apartment with Burj Khalifa views, maid's room and two parking spaces. Premium resident facilities and concierge.</p>
+            <div class="properties-card-container">
+              <div class="properties-cards"><ion-icon name="bed-outline"></ion-icon> 3 Beds</div>
+              <div class="properties-cards"><ion-icon name="water-outline"></ion-icon> 3 Baths</div>
+              <div class="properties-cards"><ion-icon name="golf-outline"></ion-icon> 2,000 sq.ft</div>
+            </div>
+            <p style="margin-top:12px;">
+              <a class="btn properties-link" href="/properties/ceruo-003">View Details →</a>
+              <a class="btn properties-link" href="/downloads/ceruo-003-brochure.pdf" target="_blank">Brochure</a>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <a href="/index.html" class="btn">Back to Home</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 CeruO Realty — Demo only.</p>
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="/index.html"><img src="/images/ceruo-logo-bw.svg" alt="CeruO Realty" class="footer-logo" /></a>
+      <p>© 2025 CeruO Realty — Demo site.</p>
+    </div>
   </footer>
 </body>
 </html>
