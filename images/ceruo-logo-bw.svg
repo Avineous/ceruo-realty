@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64" role="img" aria-labelledby="logoTitle2 logoDesc2">
+  <title id="logoTitle2">CeruO Realty logo (dark)</title>
+  <desc id="logoDesc2">CeruO Realty - Wise property insight, Dubai.</desc>
+  <defs>
+    <style>
+      .icon { fill: #071c25; }
+      .word-ceru { fill: #071c25; font-family: "Segoe UI", Roboto, Arial, sans-serif; font-weight:800; font-size:18px; }
+      .word-realty { fill: #071c25; font-family: "Segoe UI", Roboto, Arial, sans-serif; font-weight:600; font-size:17px; }
+      .tag { fill: #07242c; font-family: "Segoe UI", Roboto, Arial, sans-serif; font-weight:600; font-size:11px; }
+    </style>
+  </defs>
+
+  <g transform="translate(4,6)">
+    <rect x="0" y="16" width="44" height="36" rx="4" fill="#f6fbfc"/>
+    <path class="icon" d="M22 0 L36 12 L44 18 L38 18 L22 6 L6 18 L0 18 L10 10 Z" />
+    <circle cx="13.5" cy="22.5" r="4.5" class="icon"/>
+    <circle cx="30.5" cy="22.5" r="4.5" class="icon"/>
+    <rect x="20" y="26" width="4" height="6" rx="0.8" fill="#071c25"/>
+  </g>
+
+  <g transform="translate(60,26)">
+    <text>
+      <tspan class="word-ceru" x="0" y="0">CeruO</tspan>
+      <tspan class="word-realty" dx="-6" y="0"> Realty</tspan>
+    </text>
+    <text class="tag" x="0" y="18">Wise property insight, Dubai.</text>
+  </g>
+</svg>
+
