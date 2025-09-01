@@ -4,89 +4,54 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CeruO Realty — Dubai Real Estate Demo</title>
-  <meta name="description" content="CeruO Realty — demo Dubai real estate website with listings, FAQ, and contact. Built for testing AI automation and web deployment." />
+  <meta name="description" content="CeruO Realty — curated listings and services across Dubai. Demo site for AI agents and Copilot integration." />
   <link rel="stylesheet" href="/style-fixed.css" />
   <style>
-    /* Extra styling for header phrase + search bar */
-    .header-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 20px;
-    }
-    .header-phrase {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 6px;
-    }
-    .header-search {
-      display: flex;
-      width: 100%;
-      max-width: 320px; /* matches phrase width area */
-    }
-    .header-search input {
-      flex: 1;
-      padding: 6px 10px;
-      border: none;
-      border-radius: 4px 0 0 4px;
-      font-size: 0.9rem;
-    }
-    .header-search button {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 0 4px 4px 0;
-      background: #05668d;
-      color: #fff;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-    .header-search button:hover {
-      background: #024b66;
-    }
-    /* Keep header aligned: logo - center content - nav */
+    /* Inline header-specific styles to ensure consistent layout while CSS updates are applied */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 12px 20px;
-      background: rgba(6,38,60,0.9);
+      background: rgba(6,38,60,0.92);
+      position: relative;
+      z-index: 60;
     }
-    .header-logo {
-      height: 50px;
-    }
-    .nav {
-      display: flex;
-      gap: 16px;
-    }
-    .nav-links {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .nav-links:hover {
-      text-decoration: underline;
+    .header-logo { height: 62px; width: auto; display: inline-block; }
+    .header-center { display:flex; flex-direction:column; align-items:center; margin:0 20px; }
+    .header-phrase { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom:6px; letter-spacing:0.2px; }
+    .header-search { display:flex; width:100%; max-width:360px; }
+    .header-search input { flex:1; padding:8px 10px; border-radius:6px 0 0 6px; border:none; font-size:0.95rem; }
+    .header-search button { padding:8px 12px; border:none; border-radius:0 6px 6px 0; background:#ffd166; color:#053049; font-weight:700; cursor:pointer; }
+    .nav { display:flex; gap:0; align-items:center; }
+    .nav a { color:#fff; text-decoration:none; font-weight:600; padding:6px 10px; }
+    .nav a + a::before { content:"|"; color: rgba(255,255,255,0.25); margin: 0 10px; }
+    @media (max-width:900px) {
+      .header-search { max-width:240px; }
+      .header-logo { height:48px; }
+      .header-phrase { font-size:0.95rem; }
     }
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="header">
-    <!-- Logo -->
-    <a href="/index.html">
-      <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" />
+    <!-- left: logo -->
+    <a href="/index.html" aria-label="CeruO Realty home">
+      <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty logo" class="header-logo" />
     </a>
 
-    <!-- Center phrase + search -->
-    <div class="header-center">
-      <span class="header-phrase">Smart. Seamless. Secure.</span>
+    <!-- center: phrase + search -->
+    <div class="header-center" role="search">
+      <div class="header-phrase">Smart. Seamless. Secure.</div>
       <div class="header-search">
-        <input type="text" placeholder="Search by area, type, or price…" />
-        <button>Search</button>
+        <input type="search" placeholder="Search by area, type or price (e.g., Dubai Marina, 2BR, AED 1.5M)" aria-label="Search properties" />
+        <button type="button" onclick="alert('Demo search — integrate with Copilot/agent for live results')">Search</button>
       </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav">
+    <!-- right: nav -->
+    <nav class="nav" aria-label="Main navigation">
       <a href="/index.html" class="nav-links active">About</a>
       <a href="/properties.html" class="nav-links">Properties</a>
       <a href="/faq.html" class="nav-links">FAQ</a>
@@ -113,18 +78,229 @@
       </div>
     </section>
 
-    <!-- Rest of your sections (About, Properties, FAQ, Contact, etc.) -->
-    <!-- ... -->
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="secondary-heading">We manage the property journey — end to end</h2>
+      <p class="hero-description about-description">
+        CeruO Realty offers buying, selling, leasing and property management services with local Dubai market expertise. We provide virtual tours, downloadable brochures, and guided viewings to help you make confident decisions.
+      </p>
+
+      <div class="about-container">
+        <div class="about-box">
+          <ion-icon name="home-outline" class="about-logo"></ion-icon>
+          <h3 class="about-heading">Valuation & AVM</h3>
+          <p class="about-box-description">Data-backed pricing guidance and automated valuation ranges to help you price listings competitively and negotiate with confidence.</p>
+        </div>
+
+        <div class="about-box">
+          <ion-icon name="calendar-outline" class="about-logo"></ion-icon>
+          <h3 class="about-heading">Viewings & Bookings</h3>
+          <p class="about-box-description">24/7 booking and scheduling support with agent handoffs. For demos we show sample booking flows and calendar integrations.</p>
+        </div>
+
+        <div class="about-box">
+          <ion-icon name="construct-outline" class="about-logo"></ion-icon>
+          <h3 class="about-heading">Property Management</h3>
+          <p class="about-box-description">Tenant maintenance request handling, vendor scheduling and streamlined workflows to keep properties performing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPERTIES -->
+    <section class="section" id="properties">
+      <h2 class="secondary-heading">Featured Listings</h2>
+      <p class="hero-description about-description">Handpicked properties across Dubai — mix of for sale, for rent and off-plan options. Click a listing to view details, download brochures or watch virtual tours.</p>
+
+      <div class="properties-set">
+        <!-- Listing 1 -->
+        <div class="properties-card container-card">
+          <img
+            src="/images/ceruo-marina-exterior-3x2.webp"
+            alt="Residential tower with marina view — Dubai Marina"
+            class="properties-img"
+            loading="lazy"
+            width="1024" height="688"
+            onerror="this.onerror=null;this.src='/images/ceruo-001-placeholder.svg';" />
+          <div class="properties-container">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Dubai Marina</p>
+            <h3 class="ternary-heading">2BR Luxury Apartment — Marina View</h3>
+            <h3 class="hero-price properties-price">AED 3,500,000</h3>
+
+            <div class="properties-card-container">
+              <div class="properties-cards"><ion-icon name="bed-outline" class="properties-card-logo"></ion-icon> 2 Bedrooms</div>
+              <div class="properties-cards"><ion-icon name="water-outline" class="properties-card-logo"></ion-icon> 2 Bathrooms</div>
+              <div class="properties-cards"><ion-icon name="golf-outline" class="properties-card-logo"></ion-icon> 1,300 sq.ft</div>
+            </div>
+
+            <p class="properties-description">Bright 2BR on a high floor with panoramic marina views, balcony and premium finishes. Building amenities include gym, pool and 24/7 concierge.</p>
+
+            <div class="properties-list-links">
+              <a href="/properties/ceruo-001" class="btn properties-link properties-website-link">View Details &rarr;</a>
+              <a href="/downloads/ceruo-001-brochure.pdf" target="_blank" class="btn properties-link">Brochure</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="properties-card container-card">
+          <div class="properties-container">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Jumeirah Lake Towers (JLT)</p>
+            <h3 class="ternary-heading">Studio — Ready to Move</h3>
+            <h3 class="hero-price properties-price">AED 52,000 / year</h3>
+
+            <div class="properties-card-container">
+              <div class="properties-cards"><ion-icon name="bed-outline" class="properties-card-logo"></ion-icon> Studio</div>
+              <div class="properties-cards"><ion-icon name="water-outline" class="properties-card-logo"></ion-icon> 1 Bathroom</div>
+              <div class="properties-cards"><ion-icon name="golf-outline" class="properties-card-logo"></ion-icon> 420 sq.ft</div>
+            </div>
+
+            <p class="properties-description">Compact studio ideal for professionals, close to transport links and retail. Building amenities include pool and secure parking.</p>
+
+            <div class="properties-list-links">
+              <a href="/properties/ceruo-002" class="btn properties-link properties-website-link">View Details &rarr;</a>
+              <a href="/downloads/ceruo-002-brochure.pdf" target="_blank" class="btn properties-link">Brochure</a>
+            </div>
+          </div>
+          <img src="/images/ceruo-jlt-studio-2x3.webp" alt="Studio JLT" class="properties-img properties-right" loading="lazy" width="688" height="1024" onerror="this.onerror=null;this.src='/images/ceruo-002-placeholder.svg';" />
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="properties-card container-card">
+          <img src="/images/ceruo-downtown-3br-3x2.webp" alt="3BR Downtown" class="properties-img" loading="lazy" width="1024" height="688" onerror="this.onerror=null;this.src='/images/ceruo-003-placeholder.svg';" />
+          <div class="properties-container">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Downtown Dubai</p>
+            <h3 class="ternary-heading">3BR Family Apartment — Burj View</h3>
+            <h3 class="hero-price properties-price">AED 6,200,000</h3>
+
+            <div class="properties-card-container">
+              <div class="properties-cards"><ion-icon name="bed-outline" class="properties-card-logo"></ion-icon> 3 Bedrooms</div>
+              <div class="properties-cards"><ion-icon name="water-outline" class="properties-card-logo"></ion-icon> 3 Bathrooms</div>
+              <div class="properties-cards"><ion-icon name="golf-outline" class="properties-card-logo"></ion-icon> 2,000 sq.ft</div>
+            </div>
+
+            <p class="properties-description">Spacious apartment with Burj Khalifa views, maid's room and two parking spaces. Premium resident facilities and concierge service.</p>
+
+            <div class="properties-list-links">
+              <a href="/properties/ceruo-003" class="btn properties-link properties-website-link">View Details &rarr;</a>
+              <a href="/downloads/ceruo-003-brochure.pdf" target="_blank" class="btn properties-link">Brochure</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/properties.html" class="properties-more">See more properties &rarr;</a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonial">
+      <h2 class="secondary-heading">What clients say</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <img src="/images/ceruo-004-placeholder.svg" alt="client" class="testimonial-img" />
+          <div class="testimonial-description">
+            "CeruO Realty made our move to Dubai seamless — quick viewings and clear advice throughout the process."
+          </div>
+          <p class="testimonial-author">— Fatima Al Mansoori</p>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="/images/ceruo-005-placeholder.svg" alt="client" class="testimonial-img" />
+          <div class="testimonial-description">
+            "Professional agents and helpful service. The virtual tour saved us several in-person visits."
+          </div>
+          <p class="testimonial-author">— Omar Hassan</p>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="/images/ceruo-006-placeholder.svg" alt="client" class="testimonial-img" />
+          <div class="testimonial-description">
+            "Great communication and reliable management — highly recommended for landlords and tenants."
+          </div>
+          <p class="testimonial-author">— Aisha Khan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="secondary-heading contact-heading">Get in touch</h2>
+      <p class="hero-description about-description">For enquiries, viewings or partnerships contact our Dubai office. For faster replies use the WhatsApp links on listing pages.</p>
+
+      <div class="contact-container">
+        <div class="contact-box">
+          <label for="name" class="contact-label">Full Name</label>
+          <input type="text" id="name" name="name" class="contact-input" placeholder="Your full name" />
+        </div>
+
+        <div class="contact-box">
+          <label for="email" class="contact-label">Email Address</label>
+          <input type="email" id="email" name="email" class="contact-input" placeholder="name@example.com" />
+        </div>
+
+        <div class="contact-box contact-house">
+          <label for="interest" class="contact-label">I'm Looking for</label>
+          <input type="text" id="interest" name="interest" class="contact-input" placeholder="e.g., 2BR Dubai Marina — buy" />
+        </div>
+
+        <div class="contact-box contact-house">
+          <label for="message" class="contact-label">Message</label>
+          <textarea id="message" name="message" cols="30" rows="6" placeholder="Write a brief message..." class="contact-input"></textarea>
+        </div>
+      </div>
+
+      <div class="contact-link" style="margin-top:12px;">
+        <a href="#" class="btn properties-link">Send Message &rarr;</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer" id="site-footer">
     <div class="footer-container">
-      <a href="/index.html"><img src="/images/ceruo-logo-bw.svg" alt="CeruO Realty" class="footer-logo" /></a>
-      <p>© 2025 CeruO Realty — Demo site.</p>
+      <a href="/index.html">
+        <img src="/images/ceruo-logo-bw.svg" alt="CeruO Realty" class="footer-logo" />
+      </a>
+      <p class="copyright">© 2025 CeruO Realty — Demo site. All content for demonstration purposes only.</p>
+    </div>
+
+    <div class="footer-container social-container">
+      <h3 class="footer-heading">Social Links</h3>
+      <div class="social-links-list">
+        <a href="#" target="_blank" class="social-link">
+          <ion-icon name="logo-linkedin" class="footer-social-logo"></ion-icon>
+          <p class="social">LinkedIn</p>
+        </a>
+        <a href="#" target="_blank" class="social-link">
+          <ion-icon name="logo-instagram" class="footer-social-logo"></ion-icon>
+          <p class="social">Instagram</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <h3 class="footer-heading">Contact</h3>
+      <address class="address">Office 1401, Marina Plaza, Dubai Marina, Dubai, UAE</address>
+      <address class="contact">
+        <a class="social-link" href="tel:+97145550101">+971 4 555 0101</a><br />
+        <a class="social-link" href="mailto:hello@ceruorealty.demo">hello@ceruorealty.demo</a>
+      </address>
     </div>
   </footer>
+
+  <script>
+    // small helper so clicking Search in header gives demo action - replace with real search later
+    document.querySelectorAll('.header-search button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const q = btn.previousElementSibling && btn.previousElementSibling.value;
+        if (!q) { alert('Enter a query to search (demo)'); return; }
+        alert('Demo search for: ' + q);
+      });
+    });
+  </script>
 </body>
 </html>
+
+
 
 
 
