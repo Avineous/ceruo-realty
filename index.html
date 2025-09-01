@@ -22,6 +22,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- use root path so Netlify domain doesn't matter -->
     <link rel="stylesheet" href="/style-fixed.css" />
     <title>CeruO Realty — Dubai Property Listings & Services</title>
     <meta name="description" content="CeruO Realty is a Dubai-based real estate company showcasing residential, commercial and off-plan listings, virtual tours, downloadable brochures, and agent services across Dubai." />
@@ -29,7 +30,7 @@
   <body>
     <header class="header">
       <a href="/">
-        <!-- use white logo on dark hero/header for contrast -->
+        <!-- white logo for dark hero header -->
         <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty logo" class="header-logo" />
       </a>
       <nav class="nav">
@@ -58,7 +59,6 @@
           <p class="hero-prices" style="margin-top:18px;">Prices starting from</p>
           <h3 class="hero-price">AED 250,000+</h3>
         </div>
-        <!-- removed the inline hero <img> placeholder to avoid broken icon -->
       </section>
 
       <!-- ABOUT -->
@@ -106,13 +106,13 @@
           <!-- Listing 1 (ceruo-001) -->
           <div class="properties-card container-card">
             <img
-  src="/images/ceruo-marina-exterior-3x2.webp"
-  alt="Residential tower with marina view — Dubai Marina"
-  class="properties-img"
-  loading="lazy"
-  width="1024" height="688"
-  onerror="this.onerror=null;this.src='/images/ceruo-001-placeholder.svg';"
-/>
+              src="/images/ceruo-marina-exterior-3x2.webp"
+              alt="Residential tower with marina view — Dubai Marina"
+              class="properties-img"
+              loading="lazy"
+              width="1024" height="688"
+              onerror="this.onerror=null;this.src='/images/ceruo-001-placeholder.svg';"
+            />
             <div class="properties-container">
               <p class="properties-loc">
                 <ion-icon name="location-outline"></ion-icon> Dubai Marina
@@ -324,6 +324,8 @@
     </footer>
   </body>
 </html>
+
+
 
 
 
