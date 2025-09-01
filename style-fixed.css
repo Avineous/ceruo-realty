@@ -186,3 +186,136 @@ body, p, li, input, textarea {
 
 /* fallback trick: if image can't load, set a neutral background-size text using CSS isn't possible,
    so we will recommend adding onerror fallback on <img> tags (see below) */
+
+/* ===== Header: larger logo, tagline, nav pipes, header layout ===== */
+.header {
+  position: relative;
+  z-index: 60;
+  background: linear-gradient(180deg, rgba(6,38,60,0.92), rgba(6,38,60,0.88));
+  box-shadow: 0 2px 8px rgba(6,30,60,0.06);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 20px;
+  justify-content: space-between;
+}
+
+/* left block with logo + optional subline */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* LOGO sizing — bigger for desktop, responsive for mobile */
+.header-logo {
+  height: 62px;            /* larger logo — change to 72px if you want even bigger */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Optional subline displayed next to logo (small, lighter weight) */
+.site-subline {
+  color: rgba(255,255,255,0.95);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-left: 6px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* primary nav in center/right */
+.nav {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  margin-left: 12px;
+}
+
+/* add pipe before every nav item except first */
+.nav a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.nav a + a::before {
+  content: "|";
+  color: rgba(255,255,255,0.25);
+  padding: 0 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* right area with phone and CTA */
+.header-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.contact-link {
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  font-weight:600;
+  font-size:13px;
+  margin-right:6px;
+}
+.btn-cta {
+  background: #ffd166; /* warm accent */
+  color: #053049;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight:700;
+  box-shadow: 0 6px 16px rgba(6,30,60,0.08);
+}
+
+/* responsive: shrink logo & layout on narrow screens */
+@media (max-width: 880px) {
+  .header-inner { padding: 10px 12px; }
+  .header-logo { height: 48px; }
+  .site-subline { display: none; } /* keep SVG tagline on small screens */
+  .nav a { padding: 6px 8px; font-size:13px; }
+  .nav a + a::before { padding: 0 8px; }
+  .btn-cta { padding: 6px 10px; font-size:13px; }
+}
+
+/* ===== Hero overlay: make overlay lighter so background is more visible ===== */
+/* Use this rule if hero background is set via CSS. If you have inline style in index.html,
+   replace the inline gradient alpha with similar values below. */
+.section.hero {
+  background-image:
+    linear-gradient(180deg, rgba(6,38,60,0.62), rgba(7,103,150,0.50)),
+    url('/images/ceruo-hero-skyline-21x9.webp');
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  /* text shadow for contrast */
+  text-shadow: 0 6px 18px rgba(6,30,60,0.35);
+}
+
+/* slightly increase hero text contrast */
+.primary-heading { color: #fff; font-size: 36px; }
+.hero-description { color: rgba(255,255,255,0.92); max-width:760px; }
+
+/* make CTAs pop on hero */
+.btn-properties, .btn-cta {
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.btn-properties:hover, .btn-cta:hover { transform: translateY(-3px); }
+
+/* small-screen tweaks for hero text */
+@media (max-width:700px) {
+  .primary-heading { font-size:28px; }
+  .hero-description { font-size:15px; padding: 0 12px; }
+}
+
