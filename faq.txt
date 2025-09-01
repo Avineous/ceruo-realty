@@ -1,5 +1,51 @@
-What areas of Dubai do you cover? We specialize in Dubai Marina, Downtown, Business Bay, Palm Jumeirah, JLT, and DIFC.
-Do you assist with rentals as well as sales? Yes, we cover buying, selling, and leasing across residential and commercial segments.
-Can I book property viewings online? Yes, our site supports 24/7 booking requests with agent follow-ups.
-Do you provide property valuations? We offer data-backed valuation reports and AVMs for accurate pricing guidance.
-Are the listings here real? No, this is a demo website. All properties are fictional and for demonstration purposes only.
+Q: What services does CeruO Realty provide?  
+A: CeruO Realty offers buying, selling, leasing, and property management services across Dubai. We also provide valuations, brochures, virtual tours, and guided viewings.  
+
+Q: Can I rent as well as buy through CeruO Realty?  
+A: Yes. We support both rentals and purchases, including long-term leases and short-term lets.  
+
+Q: Do you cover off-plan developments?  
+A: Yes, we feature selected off-plan projects from leading Dubai developers with brochures and payment plans available.  
+
+Q: How do I book a property viewing?  
+A: Use the “Book a Viewing” button on listings, fill in your details, and an agent will confirm a time with you.  
+
+Q: Can I download property brochures?  
+A: Yes. Every featured property includes a downloadable PDF brochure with photos, floor plans, and details.  
+
+Q: Are virtual tours available?  
+A: Many of our listings include virtual tours so you can explore properties online before visiting in person.  
+
+Q: How do you value properties?  
+A: We use Automated Valuation Models (AVMs) along with local expert input to provide data-backed price guidance.  
+
+Q: Is CeruO Realty licensed?  
+A: Yes. All our operations comply with Dubai Land Department and RERA requirements.  
+
+Q: Do you handle property management?  
+A: Yes, we manage maintenance requests, vendor scheduling, and tenancy renewals for landlords.  
+
+Q: Can you help international buyers?  
+A: Absolutely. We assist overseas investors with legal guidance, remote tours, and end-to-end support.  
+
+Q: What locations do you cover?  
+A: Our listings focus on Dubai Marina, Downtown, Business Bay, Palm Jumeirah, JLT, and DIFC.  
+
+Q: How do I get in touch?  
+A: Use the contact form on our site or email hello@ceruorealty.demo for general enquiries.  
+
+Q: Is this a real estate agency or a demo site?  
+A: This is a demonstration site built to showcase how a property platform could look. All content is for demo purposes only.  
+
+Q: Do you integrate AI or Copilot features?  
+A: Yes. The demo illustrates how AI assistants can answer FAQs, schedule viewings, and assist customers.  
+
+Q: What payment methods are accepted?  
+A: For demo purposes, payments are not processed. In a live setup, we would support bank transfers, cheques, and online payment gateways.  
+
+Q: Can landlords list their properties here?  
+A: In a real version, landlords could submit properties for listing. In this demo, listings are pre-populated.  
+
+Q: What’s the best way to stay updated on new properties?  
+A: In a real platform, you could subscribe to alerts. For this demo, browse the site to see sample listings.  
+
