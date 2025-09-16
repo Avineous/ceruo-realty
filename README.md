@@ -40,7 +40,7 @@ It serves as the foundation for testing AI automations, chatbots, and Microsoft 
 ---
 
 ## Website Link
-(Coming soon — will be updated once deployed on Netlify)
+![Website Link](https://ceruo-realty.netlify.app/)
 
 ---
 
