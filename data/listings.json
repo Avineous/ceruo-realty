@@ -8,8 +8,10 @@
       "type": "Sale",
       "beds": 3,
       "baths": 2,
+      "sqft": "1,100",
       "image": "/img/countries/us/us-001.jpg",
-      "summary": "Bright 3 bedroom loft near subway. Open-plan living, great light."
+      "summary": "Bright 3 bedroom loft near subway. Open-plan living, great light.",
+      "brochure": "/downloads/us-001-brochure.pdf"
     }
   ],
   "UK": [
@@ -21,10 +23,14 @@
       "type": "Sale",
       "beds": 2,
       "baths": 1,
+      "sqft": "900",
       "image": "/img/countries/uk/uk-001.jpg",
-      "summary": "Characterful, near coffee shops and transport links."
+      "summary": "Characterful flat close to coffee shops and transport links.",
+      "brochure": "/downloads/uk-001-brochure.pdf"
     }
   ],
+  "CA": [],
+  "AU": [],
   "AE": [
     {
       "id": "ae-001",
@@ -34,10 +40,23 @@
       "type": "Sale",
       "beds": 2,
       "baths": 2,
+      "sqft": "1,250",
       "image": "/img/countries/ae/ae-001.jpg",
-      "summary": "Beachfront apartment with panoramic sea views."
+      "summary": "Beachfront apartment with panoramic sea views.",
+      "brochure": "/downloads/ae-001-brochure.pdf"
+    },
+    {
+      "id": "ae-002",
+      "title": "2BR Luxury Apartment — Marina View",
+      "price": "AED 3,500,000",
+      "city": "Dubai Marina",
+      "type": "Sale",
+      "beds": 2,
+      "baths": 2,
+      "sqft": "1,300",
+      "image": "/img/countries/ae/ae-002.jpg",
+      "summary": "Bright 2BR on a high floor with panoramic marina views.",
+      "brochure": "/downloads/ae-002-brochure.pdf"
     }
-  ],
-  "CA": [],
-  "AU": []
+  ]
 }
