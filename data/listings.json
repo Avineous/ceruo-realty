@@ -1,0 +1,43 @@
+{
+  "US": [
+    {
+      "id": "us-001",
+      "title": "Modern 3BR in Brooklyn",
+      "price": "$750,000",
+      "city": "Brooklyn, NY",
+      "type": "Sale",
+      "beds": 3,
+      "baths": 2,
+      "image": "/img/countries/us/us-001.jpg",
+      "summary": "Bright 3 bedroom loft near subway. Open-plan living, great light."
+    }
+  ],
+  "UK": [
+    {
+      "id": "uk-001",
+      "title": "Charming 2BR Flat in Shoreditch",
+      "price": "£650,000",
+      "city": "London",
+      "type": "Sale",
+      "beds": 2,
+      "baths": 1,
+      "image": "/img/countries/uk/uk-001.jpg",
+      "summary": "Characterful, near coffee shops and transport links."
+    }
+  ],
+  "AE": [
+    {
+      "id": "ae-001",
+      "title": "Luxury 2BR on Palm Jumeirah",
+      "price": "AED 3,500,000",
+      "city": "Dubai",
+      "type": "Sale",
+      "beds": 2,
+      "baths": 2,
+      "image": "/img/countries/ae/ae-001.jpg",
+      "summary": "Beachfront apartment with panoramic sea views."
+    }
+  ],
+  "CA": [],
+  "AU": []
+}
