@@ -1,47 +1,12 @@
-{
-  "US": [],
-  "UK": [],
-  "CA": [],
-  "AU": [],
-  "AE": [
-    {
-      "id": "ae-001",
-      "title": "2BR Luxury Apartment — Marina View",
-      "price": "AED 3,500,000",
-      "city": "Dubai Marina",
-      "type": "Sale",
-      "beds": 2,
-      "baths": 2,
-      "sqft": "1,300",
-      "image": "/img/countries/ae/ceruo-marina-exterior-3x2.webp",
-      "summary": "Bright 2BR on a high floor with panoramic marina views, large balcony and premium finishes.",
-      "brochure": "/downloads/ae-001-brochure.pdf"
-    },
-    {
-      "id": "ae-002",
-      "title": "3BR Family Apartment — Burj View",
-      "price": "AED 6,200,000",
-      "city": "Downtown Dubai",
-      "type": "Sale",
-      "beds": 3,
-      "baths": 3,
-      "sqft": "2,000",
-      "image": "/img/countries/ae/ceruo-downtown-3br-3x2.webp",
-      "summary": "Spacious apartment with Burj Khalifa views, maid's room and two parking spaces.",
-      "brochure": "/downloads/ae-002-brochure.pdf"
-    },
-    {
-      "id": "ae-003",
-      "title": "Palm Terrace — 2BR Luxury",
-      "price": "AED 4,200,000",
-      "city": "Palm Jumeirah",
-      "type": "Sale",
-      "beds": 2,
-      "baths": 2,
-      "sqft": "1,250",
-      "image": "/img/countries/ae/ceruo-palm-terrace-5x4.webp",
-      "summary": "Luxury beachfront apartment with landscaped terrace and sea views.",
-      "brochure": "/downloads/ae-003-brochure.pdf"
-    }
-  ]
-}
+<section class="section">
+  <h2 class="secondary-heading">Featured Market Previews</h2>
+  <p class="hero-description">Sample pick from 5 markets — click a card to view that country's listings.</p>
+
+  <div id="market-previews" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px;">
+    <!-- JS will inject 1 card per country here -->
+  </div>
+
+  <div style="text-align:center;margin-top:14px;">
+    <a href="/properties.html" class="btn">View All Markets</a>
+  </div>
+</section>
