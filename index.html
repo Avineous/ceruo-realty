@@ -19,205 +19,247 @@
   <link rel="stylesheet" href="/style-fixed.css" />
 
   <style>
-    /* Quick inline hero adjustments */
-    .hero-subtext { font-size: 1.12rem; color:#f0f0f0; max-width:700px; margin:18px auto; line-height:1.5; }
-    .country-links a { margin:0 10px; font-weight:600; }
+    /* Small inline adjustments for the demo homepage */
+    .hero-subtext { font-size: 1.12rem; color:#f0f0f0; max-width:700px; margin:18px 0; line-height:1.5; }
+    .hero { padding: 28px 18px; display:flex; gap:28px; align-items:center; justify-content:space-between; background:linear-gradient(180deg, rgba(6,38,60,0.95), rgba(6,38,60,0.88)); color:#fff; border-radius:8px; margin:18px; }
+    .hero-img { width:100%; height:320px; object-fit:cover; border-radius:8px; display:block; }
+    .hero-content { max-width:720px; }
+    .hero-buttons { margin-top:12px; display:flex; gap:10px; }
+    .secondary-heading { color:#0a566b; font-size:1.4rem; margin:8px 0 10px; }
+    .hero-description { color:#345; margin:0 0 12px; }
+    .btn { display:inline-block; padding:8px 12px; background:#053049; color:#fff; border-radius:8px; text-decoration:none; font-weight:700; }
+    .muted { color:#666; }
+    /* layout for market previews */
+    #market-previews article img { display:block; }
+    @media (max-width:900px) {
+      .hero { flex-direction:column; align-items:flex-start; }
+      .hero-img { height:200px; width:100%; }
+    }
   </style>
 </head>
 
 <body>
   <!-- HEADER -->
-  <!-- REPLACE ENTIRE HEADER with this -->
-<header class="header" role="banner" style="display:flex;align-items:center;gap:16px;padding:12px 20px;background:linear-gradient(180deg,#06323c,#053049);">
-  <!-- left: logo -->
-  <div style="display:flex;align-items:center;flex:0 0 auto;">
-    <a href="/index.html" aria-label="CeruO Realty home" style="display:flex;align-items:center;">
-      <!-- keep the existing file name -->
-      <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" style="height:54px; width:auto;"/>
-    </a>
-    <!-- If the tagline is text next to logo, remove or change it. If it's part of SVG, see below. -->
-    <div style="display:none;" id="logo-subtitle">Wise property insight, Dubai.</div>
-  </div>
-
-  <!-- center: search -->
-  <div style="flex:1 1 600px; display:flex; justify-content:center;">
-    <div style="width:100%; max-width:560px; display:flex; align-items:center;">
-      <input id="global-search" type="search" placeholder="Search by area, type or price (e.g., Brooklyn, 2BR, $750k)" aria-label="Search properties" style="flex:1;padding:10px;border-radius:8px 0 0 8px;border:none;font-size:0.98rem;" />
-      <button id="search-btn" type="button" style="padding:10px 14px;border-radius:0 8px 8px 0;border:none;background:#ffd166;font-weight:700;cursor:pointer;">Search</button>
+  <header class="header" role="banner" style="display:flex;align-items:center;gap:16px;padding:12px 20px;background:linear-gradient(180deg,#06323c,#053049);">
+    <!-- left: logo -->
+    <div style="display:flex;align-items:center;flex:0 0 auto;">
+      <a href="/index.html" aria-label="CeruO Realty home" style="display:flex;align-items:center;">
+        <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" style="height:54px; width:auto;"/>
+      </a>
+      <div style="display:none;" id="logo-subtitle">Wise property insight, Dubai.</div>
     </div>
-  </div>
 
-  <!-- right: nav -->
-  <nav class="nav" aria-label="Main navigation" style="flex:0 0 auto; display:flex; gap:8px; align-items:center;">
-    <a href="/index.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">About</a>
-    <a href="/properties.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">Properties</a>
-    <a href="/faq.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">FAQ</a>
-    <a href="#contact" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">Contact</a>
-  </nav>
-</header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <img src="/images/ceruo-hero-skyline-21x9.webp" alt="International Real Estate" class="hero-img" />
-
-    <div class="hero-content">
-      <h1 class="hero-heading">Find Your Place — USA, UK, Canada, Australia & Dubai</h1>
-
-      <p class="hero-subtext">
-        CeruO Realty brings together curated demo listings across major global markets. Explore homes, apartments, rentals and off-plan properties — all built for showcasing AI automations, lead flows, chatbots, and booking systems for real estate businesses.
-      </p>
-
-      <div class="hero-buttons">
-        <a class="btn" href="/properties.html">Explore All Markets</a>
-        <a class="btn" href="/properties.html?country=US">Browse USA Listings</a>
+    <!-- center: search -->
+    <div style="flex:1 1 600px; display:flex; justify-content:center;">
+      <div style="width:100%; max-width:560px; display:flex; align-items:center;">
+        <input id="global-search" type="search" placeholder="Search by area, type or price (e.g., Brooklyn, 2BR, $750k)" aria-label="Search properties" style="flex:1;padding:10px;border-radius:8px 0 0 8px;border:none;font-size:0.98rem;" />
+        <button id="search-btn" type="button" style="padding:10px 14px;border-radius:0 8px 8px 0;border:none;background:#ffd166;font-weight:700;cursor:pointer;">Search</button>
       </div>
     </div>
-  </section>
 
-  <!-- ABOUT SECTION -->
-  <main class="main">
-    <section class="section">
+    <!-- right: nav -->
+    <nav class="nav" aria-label="Main navigation" style="flex:0 0 auto; display:flex; gap:8px; align-items:center;">
+      <a href="/index.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">About</a>
+      <a href="/properties.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">Properties</a>
+      <a href="/faq.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">FAQ</a>
+      <a href="#contact" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main class="main" style="padding:18px;">
+    <section class="hero" aria-labelledby="hero-title">
+      <div style="flex:1 1 60%;">
+        <h1 id="hero-title" style="margin:0 0 8px 0; font-size:2rem; line-height:1.05; color:#fff;">Find Your Place — USA, UK, Canada, Australia & Dubai</h1>
+        <p class="hero-subtext">CeruO Realty brings together curated demo listings across major global markets. Explore homes, apartments, rentals and off-plan properties — all built for showcasing AI automations, lead flows, chatbots, and booking systems for real estate businesses.</p>
+
+        <div class="hero-buttons">
+          <a class="btn" href="/properties.html">Explore All Markets</a>
+          <a class="btn" href="/properties.html?country=US">Browse USA Listings</a>
+        </div>
+      </div>
+
+      <div style="flex:0 0 360px;">
+        <img src="/images/ceruo-hero-skyline-21x9.webp" alt="International Real Estate" class="hero-img" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ABOUT / FEATURES -->
+    <section class="section" style="margin-top:22px;">
       <h2 class="secondary-heading">A global real estate demo experience</h2>
-      <p class="hero-description">
-        This site now includes sample listings from multiple regions to help demonstrate automation workflows for international real estate businesses — including lead capture, instant replies, WhatsApp flows, calendar booking, and property data enrichment.
-      </p>
+      <p class="hero-description">This site includes sample listings from multiple regions to showcase automation workflows for real estate businesses — lead capture, WhatsApp flows, calendar booking and more.</p>
 
-      <div class="value-cards">
-        <div class="value-card">
-          <ion-icon name="globe-outline"></ion-icon>
-          <h3>Multi-Country Demo</h3>
-          <p>USA, UK, Canada, Australia and Dubai markets.</p>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:18px; margin-top:18px;">
+        <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">🌍</div>
+          <h3 style="margin:6px 0 8px 0;">Multi-Country Demo</h3>
+          <p class="muted">USA · UK · Canada · Australia · UAE — sample listings and workflows.</p>
+          <p style="margin-top:10px;"><a href="/properties.html" class="btn">View markets</a></p>
         </div>
 
-        <div class="value-card">
-          <ion-icon name="flash-outline"></ion-icon>
-          <h3>Automation-Ready</h3>
-          <p>Perfect for showcasing n8n lead flows, booking and AI agents.</p>
+        <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">⚡</div>
+          <h3 style="margin:6px 0 8px 0;">Automation-Ready</h3>
+          <p class="muted">n8n lead flows, auto-replies, AI qualification & booking integrations in demos.</p>
+          <p style="margin-top:10px;"><a href="/properties.html?country=US" class="btn">See demo flow</a></p>
         </div>
 
-        <div class="value-card">
-          <ion-icon name="document-text-outline"></ion-icon>
-          <h3>Brochures Included</h3>
-          <p>Each property includes a sample downloadable PDF brochure.</p>
+        <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">📄</div>
+          <h3 style="margin:6px 0 8px 0;">Brochures Included</h3>
+          <p class="muted">Each sample listing includes a downloadable brochure for demos and workflows.</p>
+          <p style="margin-top:10px;"><a href="/downloads/ceruo-001-brochure.pdf" class="btn">Download sample</a></p>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED LISTINGS (STATIC DUBAI DEMO) -->
-    <!-- Replace the existing "Multi-Country Demo" list with this block -->
-<section class="section">
-  <h2 class="secondary-heading">A global real estate demo experience</h2>
-  <p class="hero-description">This site includes sample listings from multiple regions to showcase automation workflows for real estate businesses — lead capture, WhatsApp flows, calendar booking and more.</p>
+    <!-- FEATURED MARKET PREVIEWS -->
+    <section class="section" style="margin-top:28px;">
+      <h2 class="secondary-heading">Featured Market Previews</h2>
+      <p class="hero-description">Sample picks from 5 markets — click a card to view that country's listings.</p>
 
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:18px; margin-top:18px;">
-    <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;">
-      <div style="font-size:28px; margin-bottom:8px;">🌍</div>
-      <h3 style="margin:6px 0 8px 0;">Multi-Country Demo</h3>
-      <p class="muted">USA · UK · Canada · Australia · UAE — sample listings and workflows.</p>
-      <p style="margin-top:10px;"><a href="/properties.html" class="btn">View markets</a></p>
-    </div>
+      <div id="market-previews" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px;">
+        <!-- JS will inject 1 card per country here -->
+      </div>
 
-    <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;">
-      <div style="font-size:28px; margin-bottom:8px;">⚡</div>
-      <h3 style="margin:6px 0 8px 0;">Automation-Ready</h3>
-      <p class="muted">n8n lead flows, auto-replies, AI qualification & booking integrations in demos.</p>
-      <p style="margin-top:10px;"><a href="/properties.html?country=US" class="btn">See demo flow</a></p>
-    </div>
-
-    <div style="background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center;">
-      <div style="font-size:28px; margin-bottom:8px;">📄</div>
-      <h3 style="margin:6px 0 8px 0;">Brochures Included</h3>
-      <p class="muted">Each sample listing includes a downloadable brochure for demos and workflows.</p>
-      <p style="margin-top:10px;"><a href="/downloads/ceruo-001-brochure.pdf" class="btn">Download sample</a></p>
-    </div>
-  </div>
-</section>
-
+      <div style="text-align:center;margin-top:14px;">
+        <a href="/properties.html" class="btn">View All Markets</a>
+      </div>
+    </section>
 
     <!-- TESTIMONIALS -->
-    <section class="section">
+    <section class="section" style="margin-top:28px;">
       <h2 class="secondary-heading">What clients say</h2>
-      <div class="testimonials">
-        <div class="testimonial">
+      <div class="testimonials" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px;">
+        <div class="testimonial" style="background:#fff;padding:14px;border-radius:10px;">
           <p>"Amazing experience — everything from viewing to contract signing felt smooth and professional."</p>
-          <p class="client-name">— Sarah Thompson</p>
+          <p class="client-name" style="font-weight:700;margin-top:10px;">— Sarah Thompson</p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" style="background:#fff;padding:14px;border-radius:10px;">
           <p>"The automation demo helped us understand how AI could help manage our leads faster."</p>
-          <p class="client-name">— Daniel Fraser</p>
+          <p class="client-name" style="font-weight:700;margin-top:10px;">— Daniel Fraser</p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" style="background:#fff;padding:14px;border-radius:10px;">
           <p>"Loved the virtual tours and instant WhatsApp replies — great for remote buyers."</p>
-          <p class="client-name">— Amina Rahman</p>
+          <p class="client-name" style="font-weight:700;margin-top:10px;">— Amina Rahman</p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-   <section id="contact" class="section">
-  <h2 class="secondary-heading">Get in touch</h2>
-  <p class="hero-description">For demo enquiries, automation setups or partnerships, contact our demo team.</p>
+    <section id="contact" class="section" style="margin-top:28px;">
+      <h2 class="secondary-heading">Get in touch</h2>
+      <p class="hero-description">For demo enquiries, automation setups or partnerships, contact our demo team.</p>
 
-  <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;">
-    <form id="contact-form" method="POST" action="#" style="flex:1;max-width:680px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.06);">
-      <label>Full Name</label>
-      <input type="text" name="name" placeholder="Your full name" required style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #ddd;" />
+      <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-top:12px;">
+        <form id="contact-form" method="POST" action="#" style="flex:1;max-width:680px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.06);">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Your full name" required style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #ddd;" />
 
-      <label>Email</label>
-      <input type="email" name="email" placeholder="name@example.com" required style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #ddd;" />
+          <label>Email</label>
+          <input type="email" name="email" placeholder="name@example.com" required style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #ddd;" />
 
-      <label>I'm looking for</label>
-      <input type="text" name="looking_for" placeholder="e.g., 2BR Brooklyn — buy" style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #ddd;" />
+          <label>I'm looking for</label>
+          <input type="text" name="looking_for" placeholder="e.g., 2BR Brooklyn — buy" style="width:100%;padding:8px;margin-bottom:8px;border-radius:6px;border:1px solid #ddd;" />
 
-      <label>Message</label>
-      <textarea name="message" rows="4" placeholder="Write a brief message..." style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd;margin-bottom:8px;"></textarea>
+          <label>Message</label>
+          <textarea name="message" rows="4" placeholder="Write a brief message..." style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd;margin-bottom:8px;"></textarea>
 
-      <button type="submit" class="btn" style="display:inline-block;">Send Message →</button>
-    </form>
+          <button type="submit" class="btn" style="display:inline-block;">Send Message →</button>
+        </form>
 
-    <aside style="width:320px;">
-      <div style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.06);">
-        <h4>Contact (demo)</h4>
-        <p>Email: <a href="mailto:hello@ceruorealty.demo">hello@ceruorealty.demo</a></p>
-        <p>Offices (demo): USA · UK · Canada · Australia · UAE</p>
-        <p>WhatsApp (demo): Test number available for automated flows</p>
+        <aside style="width:320px;">
+          <div style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.06);">
+            <h4>Contact (demo)</h4>
+            <p>Email: <a href="mailto:hello@ceruorealty.demo">hello@ceruorealty.demo</a></p>
+            <p>Offices (demo): USA · UK · Canada · Australia · UAE</p>
+            <p>WhatsApp (demo): Test number available for automated flows</p>
+          </div>
+        </aside>
       </div>
-    </aside>
-  </div>
-</section>
-</main>
+    </section>
+  </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
-  <div class="footer-container">
-    <a href="/index.html"><img src="/images/ceruo-logo-bw.svg" alt="CeruO Realty" class="footer-logo" /></a>
-    <p>© 2025 CeruO Realty — International Demo Site</p>
-    <p>Offices (demo): USA · UK · Canada · Australia · UAE</p>
-    <p>Email: <a href="mailto:hello@ceruorealty.demo">hello@ceruorealty.demo</a></p>
-  </div>
-</footer>
-  
-  <!-- JS -->
+  <footer class="footer" style="margin-top:28px;">
+    <div class="footer-container" style="text-align:center;padding:22px;background:#053049;color:#fff;">
+      <a href="/index.html"><img src="/images/ceruo-logo-bw.svg" alt="CeruO Realty" class="footer-logo" style="height:44px;display:block;margin:0 auto 8px;" /></a>
+      <p style="margin:6px 0;">© 2025 CeruO Realty — International Demo Site</p>
+      <p style="margin:6px 0;">Offices (demo): USA · UK · Canada · Australia · UAE</p>
+      <p style="margin:6px 0;">Email: <a style="color:#ffd166;" href="mailto:hello@ceruorealty.demo">hello@ceruorealty.demo</a></p>
+    </div>
+  </footer>
+
+  <!-- MARKET PREVIEWS SCRIPT -->
   <script>
-    // Demo search function
-    document.querySelectorAll('.header-search button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const q = btn.previousElementSibling.value;
-        if (!q) return alert('Enter a search query');
-        alert('Demo search for: ' + q);
-      });
+  (async function renderMarketPreviews(){
+    try{
+      const res = await fetch('/data/listings.json', {cache:'no-store'});
+      if (!res.ok) throw new Error('Failed to load listings.json: ' + res.status);
+      const data = await res.json();
+
+      const countryOrder = ['US','UK','CA','AU','AE'];
+      const container = document.getElementById('market-previews');
+      if (!container) return;
+
+      const html = countryOrder.map(code => {
+        const list = data[code] || [];
+        const item = list[0] || null;
+        const title = item ? item.title : `${code} sample`;
+        const price = item ? item.price : '';
+        const img = item ? item.image : '/images/ceruo-building-entrance-3x2.webp';
+        const city = item ? item.city : '';
+        return `
+          <article style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
+            <img src="${img}" style="width:100%;height:160px;object-fit:cover;display:block;" alt="${escapeHtml(title)}" loading="lazy" />
+            <div style="padding:12px;">
+              <p style="color:#0a566b;margin:0 0 6px 0;font-weight:700;">${escapeHtml(city)}</p>
+              <h4 style="margin:2px 0 8px 0;">${escapeHtml(title)}</h4>
+              <p style="margin:4px 0 10px 0;font-weight:700;">${escapeHtml(price)}</p>
+              <a href="/properties.html?country=${code}" class="btn">View market</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+      container.innerHTML = html;
+
+    }catch(e){
+      console.error('market preview error', e);
+      const container = document.getElementById('market-previews');
+      if (container) container.innerHTML = '<p class="muted">Market previews are temporarily unavailable.</p>';
+    }
+
+    function escapeHtml(str){
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  })();
+  </script>
+
+  <!-- UI SCRIPTS -->
+  <script>
+    // Demo search button behavior
+    document.getElementById('search-btn')?.addEventListener('click', () => {
+      const q = document.getElementById('global-search')?.value || '';
+      if (!q) { alert('Enter a query to search (demo)'); return; }
+      alert('Demo search for: ' + q + '\nThis will be wired to listing search in production.');
     });
 
-    // Demo contact form functionality
-    const form = document.querySelector('.contact-form');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Message submitted (Demo — not sent)');
-      form.reset();
-    });
+    // Demo contact form functionality — use id 'contact-form'
+    (function() {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Message submitted (Demo — not sent)');
+        form.reset();
+      });
+    })();
   </script>
 </body>
 </html>
-
-
-
