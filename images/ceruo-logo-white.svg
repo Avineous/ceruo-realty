@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64" role="img" aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">CeruO Realty logo (white)</title>
-  <desc id="logoDesc">CeruO Realty - Wise property insight, Dubai.</desc>
+  <desc id="logoDesc">CeruO Realty - Wise property insight</desc>
   <defs>
     <style>
       .icon { fill: #ffffff; }
@@ -26,6 +26,6 @@
       <tspan class="word-ceru" x="0" y="0">CeruO</tspan>
       <tspan class="word-realty" dx="-6" y="0"> Realty</tspan>
     </text>
-    <text class="tag" x="0" y="18">Wise property insight, Dubai.</text>
+    <text class="tag" x="0" y="18">Wise property insight</text>
   </g>
 </svg>
