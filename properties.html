@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Properties — CeruO Realty</title>
-  <meta name="description" content="CeruO Realty — Featured properties across Dubai Marina, JLT and Downtown. Click a listing for full details, brochures and contact info." />
+  <meta name="description" content="CeruO Realty — Featured properties across US, UK, Canada, Australia and Dubai. Click a listing for full details, brochures and contact actions." />
 
   <!-- Fonts (same as homepage) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,8 +18,8 @@
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="/style-fixed.css" />
 
-  <!-- Inline header styles to match homepage header (phrase + search) -->
   <style>
+    /* header tweaks kept from your original */
     .header {
       display: flex;
       justify-content: space-between;
@@ -39,10 +39,26 @@
     .nav { display:flex; gap:0; align-items:center; }
     .nav a { color:#fff; text-decoration:none; font-weight:600; padding:6px 10px; }
     .nav a + a::before { content:"|"; color: rgba(255,255,255,0.25); margin: 0 10px; }
+
+    /* Listing grid styles (minimal, adapt to your existing css) */
+    .properties-set { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap:20px; margin-top:18px; }
+    .property-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(4,18,32,0.06); display:flex; flex-direction:column; }
+    .property-thumb { width:100%; height:220px; object-fit:cover; display:block; }
+    .property-body { padding:16px; }
+    .property-body h3 { margin:0 0 6px 0; font-size:1.05rem; color:#053049; }
+    .property-price { color:#053049; font-weight:700; margin:6px 0; }
+    .property-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; color:#333; font-size:0.95rem; }
+    .property-actions { margin-top:12px; display:flex; gap:8px; }
+    .btn { background:#053049; border:none; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:700; }
+    .country-links { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+    .country-links a { padding:6px 10px; background:#f3f6f8; border-radius:6px; color:#053049; text-decoration:none; font-weight:600; }
+    .muted { color:#666; font-style:italic; }
+
     @media (max-width:900px) {
       .header-search { max-width:240px; }
       .header-logo { height:48px; }
       .header-phrase { font-size:0.95rem; }
+      .property-thumb { height:180px; }
     }
   </style>
 </head>
@@ -54,9 +70,9 @@
     </a>
 
     <div class="header-center" role="search">
-      <div class="header-phrase">Smart. Seamless. Secure.</div>
+      <div class="header-phrase">Smart. Seamless. Secure. — Global Listings Demo</div>
       <div class="header-search">
-        <input type="search" placeholder="Search by area, type or price (e.g., Dubai Marina, 2BR, AED 1.5M)" aria-label="Search properties" />
+        <input type="search" placeholder="Search by area, type or price (e.g., Brooklyn, 2BR, $750k)" aria-label="Search properties" />
         <button type="button">Search</button>
       </div>
     </div>
@@ -71,92 +87,26 @@
 
   <main class="main">
     <section class="section">
-      <h1 class="secondary-heading">Available Properties</h1>
-      <p class="hero-description">Browse our curated selection of sample Dubai properties. Click a card to view the property detail page with brochure and contact actions.</p>
+      <h1 class="secondary-heading">Available Properties (International Demo)</h1>
+      <p class="hero-description">Browse example properties across multiple markets. Use the country links below or add <code>?country=US</code> (or UK / CA / AU / AE) to the URL.</p>
 
-      <div class="properties-set">
-        <!-- Property 1 -->
-        <article class="properties-card">
-          <img
-            src="/images/ceruo-marina-exterior-3x2.webp"
-            alt="2BR Luxury Apartment — Marina View"
-            class="properties-img"
-            loading="lazy"
-            width="1024" height="688"
-            onerror="this.onerror=null;this.src='/images/ceruo-001-placeholder.svg';" />
-          <div class="properties-container">
-            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Dubai Marina</p>
-            <h2>2BR Luxury Apartment — Marina View</h2>
-            <p class="properties-price"><strong>AED 3,500,000</strong></p>
-            <p>Bright 2BR on a high floor with panoramic marina views, large balcony and premium finishes. Amenities: gym, pool, concierge.</p>
-            <div class="properties-card-container">
-              <div class="properties-cards"><ion-icon name="bed-outline"></ion-icon> 2 Beds</div>
-              <div class="properties-cards"><ion-icon name="water-outline"></ion-icon> 2 Baths</div>
-              <div class="properties-cards"><ion-icon name="golf-outline"></ion-icon> 1,300 sq.ft</div>
-            </div>
-            <p style="margin-top:12px;">
-              <a class="btn properties-link" href="/properties/ceruo-001">View Details →</a>
-              <a class="btn properties-link" href="/downloads/ceruo-001-brochure.pdf" target="_blank">Brochure</a>
-            </p>
-          </div>
-        </article>
-
-        <!-- Property 2 -->
-        <article class="properties-card">
-          <img
-            src="/images/ceruo-jlt-studio-2x3.webp"
-            alt="Studio — Jumeirah Lake Towers (JLT)"
-            class="properties-img"
-            loading="lazy"
-            width="688" height="1024"
-            onerror="this.onerror=null;this.src='/images/ceruo-002-placeholder.svg';" />
-          <div class="properties-container">
-            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Jumeirah Lake Towers (JLT)</p>
-            <h2>Studio — Ready to Move</h2>
-            <p class="properties-price"><strong>AED 52,000 / year</strong></p>
-            <p>Compact, modern studio ideal for professionals. Close to transport links and retail — building amenities include pool and parking.</p>
-            <div class="properties-card-container">
-              <div class="properties-cards"><ion-icon name="bed-outline"></ion-icon> Studio</div>
-              <div class="properties-cards"><ion-icon name="water-outline"></ion-icon> 1 Bath</div>
-              <div class="properties-cards"><ion-icon name="golf-outline"></ion-icon> 420 sq.ft</div>
-            </div>
-            <p style="margin-top:12px;">
-              <a class="btn properties-link" href="/properties/ceruo-002">View Details →</a>
-              <a class="btn properties-link" href="/downloads/ceruo-002-brochure.pdf" target="_blank">Brochure</a>
-            </p>
-          </div>
-        </article>
-
-        <!-- Property 3 -->
-        <article class="properties-card">
-          <img
-            src="/images/ceruo-downtown-3br-3x2.webp"
-            alt="3BR Family Apartment — Burj View"
-            class="properties-img"
-            loading="lazy"
-            width="1024" height="688"
-            onerror="this.onerror=null;this.src='/images/ceruo-003-placeholder.svg';" />
-          <div class="properties-container">
-            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> Downtown Dubai</p>
-            <h2>3BR Family Apartment — Burj View</h2>
-            <p class="properties-price"><strong>AED 6,200,000</strong></p>
-            <p>Spacious apartment with Burj Khalifa views, maid's room and two parking spaces. Premium resident facilities and concierge.</p>
-            <div class="properties-card-container">
-              <div class="properties-cards"><ion-icon name="bed-outline"></ion-icon> 3 Beds</div>
-              <div class="properties-cards"><ion-icon name="water-outline"></ion-icon> 3 Baths</div>
-              <div class="properties-cards"><ion-icon name="golf-outline"></ion-icon> 2,000 sq.ft</div>
-            </div>
-            <p style="margin-top:12px;">
-              <a class="btn properties-link" href="/properties/ceruo-003">View Details →</a>
-              <a class="btn properties-link" href="/downloads/ceruo-003-brochure.pdf" target="_blank">Brochure</a>
-            </p>
-          </div>
-        </article>
+      <div class="country-links" style="margin-bottom:12px;">
+        <a href="/properties.html?country=US">United States</a>
+        <a href="/properties.html?country=UK">United Kingdom</a>
+        <a href="/properties.html?country=CA">Canada</a>
+        <a href="/properties.html?country=AU">Australia</a>
+        <a href="/properties.html?country=AE">Dubai (UAE)</a>
       </div>
 
-      <div style="text-align:center; margin-top:20px;">
-        <a href="/index.html" class="btn">Back to Home</a>
+      <div id="listings-root" class="properties-set" aria-live="polite">
+        <!-- Listings will be rendered here by JavaScript -->
       </div>
+
+      <div id="no-listings" style="text-align:center; margin-top:20px; display:none;">
+        <p class="muted">No listings found for this region yet. You can add demo listings in <code>data/listings.json</code>.</p>
+        <p><a href="/index.html" class="btn">Back to Home</a></p>
+      </div>
+
     </section>
   </main>
 
@@ -167,16 +117,84 @@
     </div>
   </footer>
 
+  <!-- Listings rendering script -->
   <script>
-    // demo header search behaviour (same as homepage)
-    document.querySelectorAll('.header-search button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const q = btn.previousElementSibling && btn.previousElementSibling.value;
-        if (!q) { alert('Enter a query to search (demo)'); return; }
-        alert('Demo search for: ' + q);
-      });
-    });
+    // Utility: get query param (country or default AE)
+    function getCountryFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      const c = params.get('country') || 'AE';
+      return String(c).toUpperCase();
+    }
+
+    // Render a single card HTML safe
+    function renderCard(item, country) {
+      // Fallback image if missing
+      const img = (item.image && item.image.length) ? item.image : '/images/ceruo-001-placeholder.svg';
+      const price = item.price || '';
+      const city = item.city || '';
+      const summary = item.summary || '';
+      const beds = item.beds ? `<span title="${item.beds} beds"><ion-icon name="bed-outline"></ion-icon> ${item.beds}</span>` : '';
+      const baths = item.baths ? `<span title="${item.baths} baths"><ion-icon name="water-outline"></ion-icon> ${item.baths}</span>` : '';
+      const sqft = item.sqft ? `<span><ion-icon name="golf-outline"></ion-icon> ${item.sqft}</span>` : '';
+      const detailHref = `/properties/${item.id || 'unknown'}?country=${country}`;
+
+      return `
+        <article class="property-card" aria-labelledby="${item.id || ''}">
+          <img src="${img}" class="property-thumb" alt="${escapeHtml(item.title || 'Listing')}" loading="lazy" onerror="this.onerror=null;this.src='/images/ceruo-001-placeholder.svg'"/>
+          <div class="property-body">
+            <p class="properties-loc"><ion-icon name="location-outline"></ion-icon> ${escapeHtml(city)}</p>
+            <h3 id="${item.id || ''}">${escapeHtml(item.title || 'Untitled Property')}</h3>
+            <p class="property-price">${escapeHtml(price)}</p>
+            <p class="summary">${escapeHtml(summary)}</p>
+            <div class="property-meta">${beds}${baths}${sqft}</div>
+            <div class="property-actions">
+              <a class="btn" href="${detailHref}">View details</a>
+              <a class="btn" href="${item.brochure || '#'}" target="_blank">Brochure</a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    // escape HTML to avoid injection
+    function escapeHtml(str){
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    async function loadAndRenderListings() {
+      const country = getCountryFromQuery();
+      const root = document.getElementById('listings-root');
+      const noListings = document.getElementById('no-listings');
+
+      try {
+        const res = await fetch('/data/listings.json', {cache: 'no-store'});
+        if (!res.ok) throw new Error('Failed to fetch listings.json: ' + res.status);
+        const data = await res.json();
+        const list = (data && data[country]) ? data[country] : [];
+
+        if (!list || list.length === 0) {
+          root.innerHTML = '';
+          noListings.style.display = 'block';
+          return;
+        }
+
+        noListings.style.display = 'none';
+        root.innerHTML = list.map(item => renderCard(item, country)).join('');
+      } catch (err) {
+        console.error('Error loading listings:', err);
+        root.innerHTML = '<p class="muted">Failed to load listings. Ensure <code>/data/listings.json</code> exists and is valid JSON.</p>';
+      }
+    }
+
+    // Run on DOM ready
+    document.addEventListener('DOMContentLoaded', loadAndRenderListings);
   </script>
+
 </body>
 </html>
-
