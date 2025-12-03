@@ -27,26 +27,34 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header" role="banner">
-    <a href="/index.html" aria-label="CeruO Realty home">
-      <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" />
+  <!-- REPLACE ENTIRE HEADER with this -->
+<header class="header" role="banner" style="display:flex;align-items:center;gap:16px;padding:12px 20px;background:linear-gradient(180deg,#06323c,#053049);">
+  <!-- left: logo -->
+  <div style="display:flex;align-items:center;flex:0 0 auto;">
+    <a href="/index.html" aria-label="CeruO Realty home" style="display:flex;align-items:center;">
+      <!-- keep the existing file name -->
+      <img src="/images/ceruo-logo-white.svg" alt="CeruO Realty" class="header-logo" style="height:54px; width:auto;"/>
     </a>
+    <!-- If the tagline is text next to logo, remove or change it. If it's part of SVG, see below. -->
+    <div style="display:none;" id="logo-subtitle">Wise property insight, Dubai.</div>
+  </div>
 
-    <div class="header-center" role="search">
-      <div class="header-phrase">Smart. Seamless. Secure.</div>
-      <div class="header-search">
-        <input type="search" placeholder="Search by area, type or price (e.g., Brooklyn, 2BR, $750k)" aria-label="Search properties" />
-        <button type="button">Search</button>
-      </div>
+  <!-- center: search -->
+  <div style="flex:1 1 600px; display:flex; justify-content:center;">
+    <div style="width:100%; max-width:560px; display:flex; align-items:center;">
+      <input id="global-search" type="search" placeholder="Search by area, type or price (e.g., Brooklyn, 2BR, $750k)" aria-label="Search properties" style="flex:1;padding:10px;border-radius:8px 0 0 8px;border:none;font-size:0.98rem;" />
+      <button id="search-btn" type="button" style="padding:10px 14px;border-radius:0 8px 8px 0;border:none;background:#ffd166;font-weight:700;cursor:pointer;">Search</button>
     </div>
+  </div>
 
-    <nav class="nav" aria-label="Main navigation">
-      <a href="/index.html" class="nav-links active">About</a>
-      <a href="/properties.html" class="nav-links">Properties</a>
-      <a href="/faq.html" class="nav-links">FAQ</a>
-      <a href="#contact" class="nav-links">Contact</a>
-    </nav>
-  </header>
+  <!-- right: nav -->
+  <nav class="nav" aria-label="Main navigation" style="flex:0 0 auto; display:flex; gap:8px; align-items:center;">
+    <a href="/index.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">About</a>
+    <a href="/properties.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">Properties</a>
+    <a href="/faq.html" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">FAQ</a>
+    <a href="#contact" class="nav-links" style="color:#fff;text-decoration:none;padding:6px 10px;font-weight:600;">Contact</a>
+  </nav>
+</header>
 
   <!-- HERO -->
   <section class="hero">
@@ -240,3 +248,4 @@
   </script>
 </body>
 </html>
+
